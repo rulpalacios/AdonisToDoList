@@ -22,4 +22,6 @@ Route.get('tasks', 'TaskController.index')
 Route.get('tasks/add', 'TaskController.add')
 Route.post('tasks', 'TaskController.store')
 
+Route.get('tasks/:id', 'TaskController.details')
+
 

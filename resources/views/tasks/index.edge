@@ -3,7 +3,7 @@
 		<ul class="list-group">
 			@each(task in tasks)
 				<li class="list-group-item">
-					{{ task.title }}
+					<a href="/tasks/{{task.id}}">{{ task.title }}</a>
 				</li>
 			@endeach
 		</ul>
