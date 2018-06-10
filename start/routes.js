@@ -19,4 +19,7 @@ Route.on('/').render('welcome')
 
 Route.get('tasks', 'TaskController.index')
 
+Route.get('tasks/add', 'TaskController.add')
+Route.post('tasks', 'TaskController.store')
+
 
