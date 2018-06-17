@@ -30,6 +30,23 @@ class TaskController {
 			task
 		})
 	}
+
+	async edit({params, view}){
+		const task = await Task.find(params.id)
+		return view.render('tasks.edit', {
+			task
+		})
+	}
+
+	async update({params, request, response }){
+		const task = await Task.find(params.id)
+		task.title = request.input('title')
+		task.body = request.input('body')
+
+		await task.save()
+
+		return response.redirect('/tasks')
+	}
 }
 
 module.exports = TaskController

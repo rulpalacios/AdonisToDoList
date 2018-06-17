@@ -2,4 +2,7 @@
 	@section('content')
 		<h1>{{ task.title }}</h1>
 		<p>{{ task.body }}</p>
+
+        <hr>
+		<a href="/tasks/edit/{{ task.id }}" class="btn btn-dark float-left">Edit</a>
 	@endsection
