@@ -5,4 +5,10 @@
 
         <hr>
 		<a href="/tasks/edit/{{ task.id }}" class="btn btn-dark float-left">Edit</a>
+
+		<form action="{{ '/tasks/'+ task.id + '?_method=DELETE' }}" method="POST">
+	    	{{ csrfField() }}
+			<button type="submit" class="btn btn-danger float-right">Delete</button>
+		</form>
+
 	@endsection
